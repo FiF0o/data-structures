@@ -62,7 +62,7 @@ var logger = function(val) {
 BST.prototype.BreathFirstTraversal = function(cb) {
     var queue = [this]; // initiate the queue with our first root node - 50 this.value from new BST()
     while(queue.length) {
-        let treeNode = queue.shift() // gets node to be processed by the iterator
+        var treeNode = queue.shift() // gets node to be processed by the iterator
         cb(treeNode)
         // push children (left right) in the queue
         if (treeNode.left) queue.push(treeNode.left)
